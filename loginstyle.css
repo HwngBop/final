@@ -1,0 +1,107 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    background-color: #f4f4f9; /* Light background */
+}
+
+/* Container Styling */
+.container {
+    width: 350px; /* Slightly wider */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced box-shadow for elevation */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation */
+}
+
+/* Add hover effect for the container */
+.container:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Title Styling */
+.container h2 {
+    text-align: center;
+    margin-bottom: 28px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px; /* Add more space between form groups */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px; /* Add space between label and input */
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px; /* Slightly larger padding */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Rounded corners */
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+/* Highlight input field on focus */
+.form-group input:focus {
+    outline: none; /* Remove default blue outline */
+    border-color: #007bff; /* Highlight with blue border */
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4); /* Subtle glow effect */
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Add hover effect for button */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift the button slightly */
+}
+
+/* Switch Link Styling */
+.switch {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.switch a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.switch a:hover {
+    text-decoration: underline;
+}
