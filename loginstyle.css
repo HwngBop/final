@@ -13,6 +13,9 @@ body {
     height: 100vh; 
     margin: 0;
     background-color: #f4f4f9; 
+    background-image: url('study.png'),url('hi.jfif');
+    background-repeat: no-repeat;
+    background-size: 70%, cover;
 }
 
 
@@ -23,6 +26,9 @@ body {
     border-radius: 12px; 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
     transition: transform 0.3s, box-shadow 0.3s; 
+    background-image: url('background.png') ;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -85,7 +91,7 @@ button {
 
 
 button:hover {
-    background-color: #0056b3; 
+    background-color: #FF782D; 
     transform: translateY(-2px); 
 }
 
@@ -96,7 +102,7 @@ button:hover {
 }
 
 .switch a {
-    color: #007bff;
+    color: #FF782D;
     text-decoration: none;
     font-size: 14px;
 }
