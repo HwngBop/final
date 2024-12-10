@@ -10,9 +10,9 @@ window.addEventListener("scroll", () => {
 window.addEventListener("scroll", () => {
     const header = document.querySelector(".header");
     if (window.scrollY > 0) {
-      header.classList.add("scrolled"); // Thêm class khi cuộn
+      header.classList.add("scrolled"); 
     } else {
-      header.classList.remove("scrolled"); // Bỏ class khi trở lại đầu trang
+      header.classList.remove("scrolled"); 
     }
   });
 
@@ -74,17 +74,17 @@ window.onload = function() {
   const userInfoDiv = document.getElementById("user-info");
 
   if (username) {
-      // Nếu đã đăng nhập, hiển thị tên người dùng
+      
       userInfoDiv.innerHTML = `Xin chào, <strong>${username}</strong> | <a href="#" onclick="logout()">Đăng xuất</a>`;
   } else {
-      // Nếu chưa đăng nhập, hiển thị nút đăng nhập
+      
       userInfoDiv.innerHTML = `<a href="login.html">Đăng nhập</a> | <a href="register.html">Đăng ký</a>`;
   }
 }
 
-// Hàm đăng xuất
+
 function logout() {
   localStorage.removeItem("username");
-  window.location.href = "index.html"; // Trở lại trang chủ
+  window.location.href = "index.html"; 
 }
   
