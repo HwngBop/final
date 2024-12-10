@@ -12,8 +12,8 @@ function login() {
         
         
         window.location.href = "index.html"; 
-        
         sessionStorage.setItem('username', user.username);
+
     } else {
         alert('Email hoặc mật khẩu không đúng!');
     }
@@ -27,11 +27,15 @@ function register() {
     
     if (username && email && password) {
         
-        const existingUser = users.find(user => user.email === email);
-
-        if (existingUser) {
+        const existingemail = users.find(user => user.email === email);
+        const existingusername = users.find(user => user.username === username)
+        if (existingemail) {
             alert('Email này đã được sử dụng. Vui lòng chọn email khác.');
-        } else {
+        } 
+        else if(existingusername){
+            alert('Username này đã được sử dụng. Vui lòng chọn email khác.');
+        }
+        else {
             const user = {
                 username: username,
                 email: email,
@@ -54,4 +58,10 @@ function showLoginForm() {
 function showRegisterForm() {
     document.getElementById("login-form").style.display = "none";
     document.getElementById("register-form").style.display = "block";
+}
+
+function logout() {
+    sessionStorage.removeItem('username');
+    alert("Bạn đã đăng xuất thành công!");
+    window.location.href = "index.html"; 
 }

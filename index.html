@@ -340,6 +340,19 @@
     <script src="index.js"></script>
     <script>
         AOS.init();
-      </script>
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const username = sessionStorage.getItem('username');
+            if (username) {
+                const loginDiv = document.querySelector('.login');
+                loginDiv.innerHTML = `<p>Xin chào, ${username}</p>
+                <a href="index.html" id="logout-link"> Đăng xuất</a>
+                `;
+            }
+        });
+        document.getElementById('logout-link').addEventListener('click', logout());
+    </script>
+    
 </body>
 </html>
