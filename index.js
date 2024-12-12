@@ -84,7 +84,14 @@ window.onload = function() {
 
 
 function logout() {
+  
   localStorage.removeItem("username");
-  window.location.href = "index.html"; 
+
+  const userInfoDiv = document.getElementById("user-info");
+  if (userInfoDiv) {
+    userInfoDiv.innerHTML = `<a href="login.html">\u0110\u0103ng nh\u1eadp</a> | <a href="register.html">\u0110\u0103ng k\u00fd</a>`;
+  }
+
+  window.location.href = "index.html";
 }
   

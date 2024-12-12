@@ -346,13 +346,28 @@
             const username = sessionStorage.getItem('username');
             if (username) {
                 const loginDiv = document.querySelector('.login');
-                loginDiv.innerHTML = `<p>Xin chào, ${username}</p>
-                <a href="index.html" id="logout-link"> Đăng xuất</a>
+                loginDiv.innerHTML = `
+                    <p>Xin chào, ${username}</p>
+                    <a href="index.html" class="logout" id="logout-link">Đăng xuất</a>
                 `;
+                
+               
+                const logoutLink = document.getElementById('logout-link');
+                if (logoutLink) {
+                    logoutLink.addEventListener('click', (event) => {
+                        event.preventDefault(); 
+                        logout(); 
+                    });
+                }
             }
         });
-        document.getElementById('logout-link').addEventListener('click', logout());
+    
+        function logout() {
+            sessionStorage.removeItem('username');
+            window.location.href = "index.html";
+        }
     </script>
+    
     
 </body>
 </html>
